@@ -1,0 +1,44 @@
+label {
+    display: block;
+    padding: 10px 10px 0 10px;
+}
+input {
+    width: 200px;
+    border-radius: 9px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#subbutton {
+    margin: 15px;
+}
+
+.flex-container {
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 300px;
+    flex-direction: column;
+    margin-left: 500px;
+    margin-top: 100px;
+    border: solid black;
+    border-radius: 5%;
+    padding: 25px 50px 50px 50px;
+}
+
+#loginhead {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    background-color: #0078AC;
+    border-top-right-radius: 9px;
+    border-top-left-radius: 9px;
+}
+
+#loginbody {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    background-color: #D2112C;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
