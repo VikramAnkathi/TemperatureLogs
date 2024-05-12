@@ -43,3 +43,7 @@ input {
     border-bottom-right-radius: 9px;
     border-bottom-left-radius: 9px;
 }
+
+#tablehead {
+    background-color: #0078AC;
+}

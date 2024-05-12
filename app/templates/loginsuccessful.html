@@ -6,13 +6,41 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="" />
   <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
 </head>
 <body>
     <h3>Hey! {{name}} how is it going?</h3>
     <div>
         <form action="/save/" method="POST">
-            <label for="Temperatue">Temperature</label>
-            <input type="number" step="0.01" name="num" id="num">
+            <table id="temptable">
+                <tr id="tablehead">
+                    <th>Time</th>
+                    <th>Make-line Cabinet (33-41F)</th>
+                    <th>Make-line Bins (33-41F)</th>
+                    <th>Walk-in Cooler (33-38F)</th>
+                    <th>Initial</th>
+                    <th>Time</th>
+                <tr>
+                    <td>
+                        <input type="number" name="time" id="time">
+                    </td>
+                    <td>
+                        <input type="number" name="cabinet" id="cabinet">
+                    </td>
+                    <td>
+                        <input type="number" name="cabinet" id="cabinet">
+                    </td>
+                    <td>
+                        <input type="number" name="cabinet" id="cabinet">
+                    </td>
+                    <td>
+                        <input type="number" name="cabinet" id="cabinet">
+                    </td>
+                    <td>
+                        <input type="number" name="cabinet" id="cabinet">
+                    </td>
+                </tr>
+        </table>
             <input type="submit" value="submit">
         </form>
     </div>
