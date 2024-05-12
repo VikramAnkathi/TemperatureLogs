@@ -26,7 +26,8 @@ input {
 }
 
 #loginhead {
-    padding: 15px;
+    padding: 30px;
+    margin: 15px 0;
     text-align: center;
     color: white;
     background-color: #0078AC;
