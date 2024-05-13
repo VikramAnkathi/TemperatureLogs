@@ -10,12 +10,14 @@
 </head>
 <body>
     {% if error_message %}
-        <p>Username or password incorrect</p>
+      <div id="errormessage">
+        <h2>Username or password incorrect</h2>
+      </div>
     {% endif %}
     <div>
-      <form action="/login/" method="POST" id="loginform" class="flex-container">
+      <form action="/" method="POST" id="loginform" class="flex-container">
         <div>
-          <h3 id="loginhead">Login Form</h3>
+          <h2 id="loginhead">Login Credentials</h2>
         </div>
         <div id="loginbody">
           <div>

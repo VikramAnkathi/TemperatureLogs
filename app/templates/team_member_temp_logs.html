@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Temperature Logs</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body>
+    <div class="section">
+        <h3 class="redhead">Hello Team, how is it going?</h3>
+        <div>
+            <p style="text-align: center;"> Quote of the day!............</p>
+            <br>
+        </div>
+        <p class="gem">General Information</p>
+        <div>
+            <table>
+                <tr>
+                    <th>Store</th>
+                    <th>Date</th>
+                    <th>Day of the week</th>
+                </tr>
+                <tr>
+                    <td>39055</td>
+                    <td>today</td>
+                    <td>today</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <hr>
+    <div class="section">
+        <h3 class="redhead">Manager Temperature Log</h3>
+        <table class="temptable">
+            <tr class="thead">
+                <th>Stem1</th>
+                <th>Stem2</th>
+                <th>Stem3</th>
+                <th>Stem4</th>
+                <th>Stem5</th>
+                <th>Initials</th>
+                <th>Time</th>
+            </tr>
+            <tr>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="number"></td>
+                <td><input type="text"></td>
+                <td><input type="time"></td>
+            </tr>
+        </table>
+        <br>
+        <table class="temptable">
+            <tr class="thead">
+                <th>Time</th>
+                <th>Walk-in (33-38F)</th>
+                <th>Make-line Cabinet (33-41F)</th>
+                <th>Make-line Bin Left (33-41)</th>
+                <th>Make-line Bin center (33-41)</th>
+                <th>Make-line Bin Right (33-41)</th>
+                <th>Front Coke Cooler (33-41F)</th>
+                <th>Back Coke Cooler (33-38F)</th>
+                <th>Initial</th>
+            </tr>
+            {% for i in range(0,2) %}
+                <tr id="managertemp">
+                    <td>
+                        <input type="time" name="time" id="time">
+                    </td>
+                    <td>
+                        <input type="number" name="cabinet" id="cabinet">
+                    </td>
+                    <td>
+                        <input type="number" name="cabinet" id="cabinet">
+                    </td>
+                    <td>
+                        <input type="number" name="cabinet" id="cabinet">
+                    </td>
+                    <td>
+                        <input type="number" name="cabinet" id="cabinet">
+                    </td>
+                    <td>
+                        <input type="number" name="cabinet" id="cabinet">
+                    </td>
+                    <td>
+                        <input type="number" name="bins" id="bins">
+                    </td>
+                    <td>
+                        <input type="number" name="cooler" id="cooler">
+                    </td>
+                    <td>
+                        <input type="text" name="initial" id="initial">
+                    </td>
+                    <td><input type="button" value="Freeze"></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <hr>
+    <div class="section">
+        <div>
+            <h3 class="redhead" >Team Member Temperature Log</h3>
+            <p class="gem">Internal temp. for first products exiting oven</p>
+        </div>
+        <div>
+            <p>Pizza min. requirement - 165F/74C</p>
+            <p>Chicken min requirement - 165F/74C</p>
+            <table>
+                <tr>
+                    <th>Pizza temperature - Open</th>
+                    <th>Wings temperature - Open</th>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+                <tr>
+                    <th>Pizza temperature - Close</th>
+                    <th>Wings temperature - Close</th>
+                </tr>
+                <tr>
+                    <td><input type="number"></td>
+                    <td><input type="number"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <form action="/save/" method="POST">
+                <table class="temptable">
+                    <tr class="thead">
+                        <th>Time</th>
+                        <th>Make-line Cabinet (33-41F)</th>
+                        <th>Make-line Bins (33-41F)</th>
+                        <th>Walk-in Cooler (33-38F)</th>
+                        <th>Initial</th>
+                    {% for i in range(0,8) %}
+                    <tr>
+                        <td>
+                            <input type="time" name="time" id="time">
+                        </td>
+                        <td>
+                            <input type="number" name="cabinet" id="cabinet">
+                        </td>
+                        <td>
+                            <input type="number" name="bins" id="bins">
+                        </td>
+                        <td>
+                            <input type="number" name="cooler" id="cooler">
+                        </td>
+                        <td>
+                            <input type="text" name="initial" id="initial">
+                        </td>
+                        <td><input type="button" value="Freeze"></td>
+                    </tr>
+                    {% endfor %}
+            </table>
+            <hr>
+                <input style="width:200px" type="submit" value="submit" id="subbutton">
+                <input style="width:200px" type="submit" value="Logout" id="subbutton">
+            </form>
+    </div>
+</body>
+</html>

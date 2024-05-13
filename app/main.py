@@ -14,18 +14,18 @@ fake_users = {
     "admin": "password",
 }
 
-@app.get("/", response_class = HTMLResponse)
+'''@app.get("/", response_class = HTMLResponse)
 async def index(request: Request):
-    return template.TemplateResponse("hello.html", {"request": request})
+    return template.TemplateResponse("hello.html", {"request": request})'''
 
-@app.get("/login/", response_class = HTMLResponse)
+@app.get("/", response_class = HTMLResponse)
 async def login_form(request: Request):
     return template.TemplateResponse("login.html", {"request": request})
 
-@app.post("/login/", response_class = HTMLResponse)
+@app.post("/", response_class = HTMLResponse)
 async def login(request: Request, name:str=Form(...), password:str=Form(...)):
     if name in fake_users and fake_users['admin'] == password:
-        return template.TemplateResponse("loginsuccessful.html", {"request": request, "name": name})
+        return template.TemplateResponse("team_member_temp_logs.html", {"request": request, "name": name})
     else:
         return template.TemplateResponse("login.html", {"request": request , "error_message": "Unverified UserName or Password"})
 
@@ -36,4 +36,4 @@ async def save(request: Request, num:float=Form(...)):
         with open('/Users/vikramankathi/Downloads/temperature.csv', 'a+', newline='') as file:
             writer = csv.writer(file)
             writer.writerow([num])
-        return template.TemplateResponse("loginsuccessful.html", {"request": request})
+        return template.TemplateResponse("team_member_temp_logs.html", {"request": request})

@@ -1,9 +1,17 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    padding: 25px;
+    justify-content: center;
+}
+
 label {
     display: block;
     padding: 10px 10px 0 10px;
 }
 input {
-    width: 200px;
+    width: 75%;
     border-radius: 9px;
     padding: 5px;
     margin: 5px;
@@ -11,17 +19,25 @@ input {
 
 #subbutton {
     margin: 15px;
+    padding: 20px;
+}
+
+#errormessage{
+    background-color: #D2112C;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
 }
 
 .flex-container {
     font-size: x-large;
     font-family: Arial, Helvetica, sans-serif;
-    width: 300px;
+    width: 40%;
+    margin-left: 25%;
     flex-direction: column;
-    margin-left: 500px;
     margin-top: 100px;
     border: solid black;
-    border-radius: 5%;
+    border-radius: 10px;
     padding: 25px 50px 50px 50px;
 }
 
@@ -30,7 +46,7 @@ input {
     margin: 15px 0;
     text-align: center;
     color: white;
-    background-color: #0078AC;
+    background-color: #D2112C;
     border-top-right-radius: 9px;
     border-top-left-radius: 9px;
 }
@@ -39,11 +55,48 @@ input {
     padding: 15px;
     text-align: center;
     color: white;
-    background-color: #D2112C;
+    background-color: #0078AC;
     border-bottom-right-radius: 9px;
     border-bottom-left-radius: 9px;
 }
 
-#tablehead {
+table {
+    width: 100%;
+    text-align: center;
+}
+
+.thead > th {
+    border-radius: 15px;
     background-color: #0078AC;
+    padding: 5px;
+    color: #FFFFFF;
+
+}
+
+.gem {
+    text-align: center;
+    background-color: #0078AC;
+    border-radius: 15px;
+    color: #FFFFFF;
+    padding: 5px;
+}
+
+
+.redhead {
+    background-color: #D2112C;
+    color: #FFFFFF;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0pX;
+   padding: 10px;
+    margin-top: 0px;
+}
+
+.section {
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #D2112C;
+    padding: 25px;
 }
